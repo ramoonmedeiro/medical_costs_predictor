@@ -1,4 +1,4 @@
-# Projeto Regressão
+# Custo Médico
 
 A ideia do projeto é testar algoritmos de ML de regressão a fim de determinar o custo médico de famílias, dadas as variáveis abaixo:
 
