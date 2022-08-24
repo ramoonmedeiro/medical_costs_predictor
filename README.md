@@ -47,7 +47,7 @@ Antes de realizar o pré-processamento de fato, vamos dar uma olhada na correla�
 Não existe correlações fortes entre nenhuma coluna, logo não é necessário eliminar nenhuma delas por estarem representando outras.
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/102380417/186486475-765dc718-234f-48c9-84b6-9500e0238d6d.png" width="450px" />
+  <img src="https://user-images.githubusercontent.com/102380417/186486475-765dc718-234f-48c9-84b6-9500e0238d6d.png" width="750px" />
 </div>
 
 Nosso dataset possui três colunas com variáveis categóricas nominais ('sex','smoker','region'). Para transformá-las, utilizei o ColumnTransformer com o OneHotEncoder.
