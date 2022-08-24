@@ -43,6 +43,13 @@ from sklearn.model_selection import train_test_split
 X_treino, X_teste, y_treino, y_teste = train_test_split(X, y, test_size=0.30, random_state=99)
 ```
 
+Antes de realizar o pré-processamento de fato, vamos dar uma olhada na correlação das variáveis entre si. Na Figura abaixo é possível ver tais correlações,
+Não existe correlações fortes entre nenhuma coluna, logo não é necessário eliminar nenhuma delas por estarem representando outras.
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/102380417/186486475-765dc718-234f-48c9-84b6-9500e0238d6d.png" width="450px" />
+</div>
+
 Nosso dataset possui três colunas com variáveis categóricas nominais ('sex','smoker','region'). Para transformá-las, utilizei o ColumnTransformer com o OneHotEncoder.
 Para as variáveis numéricas ('age', 'bmi', 'children') utilizei os métodos StandardScaler e MinMaxScaler para fins de comparação. A métrica de avaliação
 para este projeto vai ser a raíz do erro quarático médio (RMSE).
