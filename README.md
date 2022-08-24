@@ -173,7 +173,7 @@ Validação Cruzada: 4627.041
 ```
 Tanto para a padronização (StandardScaler) como para a normalização (MinMaxScaler) o algoritmo que obteve o menor RMSE foi o Random Forest.
 E dentre os dois, o menos valor de RMSE foi com a padronização, logo, este algoritmo com a padronização vai ser o utilizado para receber os valores
-de teste. Abaixo é apresentado o resultado de RMSE para os valores de teste, note que o valor foi parecido com o valor de RMSE nos dados de treinamento
+de teste. Abaixo é apresentado o resultado de RMSE para os valores de teste, note que o valor foi parecido com o valor de RMSE nos dados de treinamento.
 
 ```
 from sklearn.metrics import mean_squared_error
