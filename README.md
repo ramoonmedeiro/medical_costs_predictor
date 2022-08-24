@@ -47,7 +47,7 @@ Antes de realizar o pré-processamento de fato, vamos dar uma olhada na correla�
 Não existe correlações fortes entre nenhuma coluna, logo não é necessário eliminar nenhuma delas por estarem representando outras.
 
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/102380417/186486475-765dc718-234f-48c9-84b6-9500e0238d6d.png" width="750px" />
+  <img src="https://user-images.githubusercontent.com/102380417/186486475-765dc718-234f-48c9-84b6-9500e0238d6d.png" width="700px" />
 </div>
 
 Nosso dataset possui três colunas com variáveis categóricas nominais ('sex','smoker','region'). Para transformá-las, utilizei o ColumnTransformer com o OneHotEncoder.
@@ -138,7 +138,16 @@ Tanto para a padronização (StandardScaler) como para a normalização (MinMaxS
 E dentre os dois, o menos valor de RMSE foi com a padronização, logo, este algoritmo com a padronização vai ser o utilizado para receber os valores
 de teste.
 
+```
+from sklearn.metrics import mean_squared_error
+# Predição dos valores de teste
+prev_random = pipe.predict(X_teste)
+print('RMSE = %.2f' %np.sqrt(mean_squared_error(y_teste, prev_random)))
 
+RMSE = 5100.02
+```
+
+A respos
 
 
 
