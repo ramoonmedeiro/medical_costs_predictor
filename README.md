@@ -32,6 +32,43 @@ import numpy as np
 df = pd.read_csv('./dataset/insurance.csv')
 ```
 
+Olhando informações da tabela:
+
+```
+df.info()
+
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 1338 entries, 0 to 1337
+Data columns (total 7 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   age       1338 non-null   int64  
+ 1   sex       1338 non-null   object 
+ 2   bmi       1338 non-null   float64
+ 3   children  1338 non-null   int64  
+ 4   smoker    1338 non-null   object 
+ 5   region    1338 non-null   object 
+ 6   charges   1338 non-null   float64
+dtypes: float64(2), int64(2), object(3)
+memory usage: 73.3+ KB
+```
+
+O DataFrame possui 1338 instâncias e as colunas possuem são do tipo esperado, não sendo necessário 
+converter os tipos das colunas nesse momento. Aparentemente as colunas não possuem valores missing ou NaN, porém, para confirmar, executamos o camando abaixo e de fato não há valores NaN.
+
+```
+df.isnull().sum()
+
+age         0
+sex         0
+bmi         0
+children    0
+smoker      0
+region      0
+charges     0
+dtype: int64
+```
+
 Separando as variáveis preditivas/alvo e realizando a separação entre treino e teste (validação):
 
 ```
